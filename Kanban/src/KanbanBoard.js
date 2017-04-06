@@ -9,13 +9,13 @@ class KanbanBoard extends Component {
 
     return (
       <div className='app'>
-        <List id='todo'
+        <List key='todo'
           title='To Do'
           cards={todoCards} />
-        <List id='in-progress'
+        <List key='in-progress'
           title='In Progress'
           cards={inProgressCards} />
-        <List id='done'
+        <List key='done'
           title='Done'
           cards={doneCards} />
       </div>
