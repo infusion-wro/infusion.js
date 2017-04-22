@@ -1,12 +1,23 @@
 import React, { Component, PropTypes } from 'react'
 
 class CheckList extends Component {
+
+  constructor () {
+    super()
+    this.handleRemove = this.handleRemove.bind(this)
+  }
+
+  handleRemove (e) {
+    e.preventDefault()
+    console.log('click delete')
+  }
+
   render () {
     let tasks = this.props.tasks.map((task) => (
-      <li className='checklist__task'>
+      <li key={task.name} className='checklist__task'>
         <input type='checkbox' defaultChecked={task.done} />
         {task.name}
-        <a href='#' className='checklist__task--remove' />
+        <a href='#' className='checklist__task--remove' onClick={this.handleRemove} />
       </li>
     ))
 
