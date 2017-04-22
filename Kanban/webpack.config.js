@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './src/App.js',
+  entry: [require.resolve('react-dev-utils/webpackHotDevClient'), './src/App.js'],
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, '/public'),
