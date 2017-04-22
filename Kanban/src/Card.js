@@ -26,7 +26,8 @@ class Card extends Component {
     };
     return (
       <div className='card'>
-        <div className='card__title' onClick={this.toggleDetails}>
+        <div className={this.state.showDetails ? 'card__title card__title--is-open' : 'card__title'}
+          onClick={this.toggleDetails}>
           {this.props.title}
         </div>
         {cardDetails}
