@@ -49,12 +49,25 @@ class Card extends Component {
   }
 }
 
+const titlePropTypes = (props, propName, componentName) => {
+  if (props[propName]) {
+    const value = props[propName]
+    if (typeof value !== 'string' || value.length > 50) {
+      return Error(`Value of ${propName}: '${value}' in ${componentName} is too long`)
+    }
+  }
+}
+
 Card.propTypes = {
   id: PropTypes.number,
   tasks: PropTypes.array,
-  title: PropTypes.string,
-  description: PropTypes.string,
+  title: titlePropTypes,
+  description: PropTypes.string.isRequired,
   color: PropTypes.string
+}
+
+Card.defaultProps = {
+  color: 'pink'
 }
 
 export default Card

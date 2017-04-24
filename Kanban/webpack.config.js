@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     publicPath: '/public/',
     historyApiFallback: true
-  }
+  },
   resolve: {
     extensions: ['.js', '.json']
   },
