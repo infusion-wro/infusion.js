@@ -7,7 +7,7 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
-// Hint: don't use this.props in functional component 
+// Hint: don't use this.props in functional component
 
 // Important: Props are Read-Only!!
 
@@ -16,4 +16,4 @@ o Class component
   - has state (private and fully controlled by the component)
   - lifecycle methods
 
-o Both has props
+o Both has props, and both can validate props
