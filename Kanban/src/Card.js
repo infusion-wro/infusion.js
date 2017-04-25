@@ -2,6 +2,20 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CheckList from './CheckList'
 
+function Title (props) {
+  return (
+    <div className={props.showDetails ? 'card__title card__title--is-open' : 'card__title'} onClick={props.onClick} >
+      {props.title}
+    </div>
+  )
+}
+
+Title.propTypes = {
+  title: PropTypes.string,
+  showDetails: PropTypes.bool,
+  onClick: PropTypes.func
+}
+
 class Card extends Component {
   constructor () {
     super(...arguments)
@@ -39,10 +53,7 @@ class Card extends Component {
     return (
       <div className='card'>
         <div style={sideColor} />
-        <div className={this.state.showDetails ? 'card__title card__title--is-open' : 'card__title'}
-          onClick={this.toggleDetails}>
-          {this.props.title}
-        </div>
+        <Title title={this.props.title} showDetails={this.state.showDetails} onClick={this.toggleDetails} />
         {cardDetails}
       </div>
     )
