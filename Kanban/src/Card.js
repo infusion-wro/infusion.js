@@ -12,7 +12,7 @@ class Card extends Component {
   };
 
   toggleDetails () {
-    this.setState({showDetails: !this.state.showDetails})
+    this.setState(prevState => ({ showDetails: !prevState.showDetails }))
   }
 
   render () {
