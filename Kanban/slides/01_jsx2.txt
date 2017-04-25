@@ -1,0 +1,31 @@
+//JSX Represents Objects
+
+//These two examples are identical:
+
+const element = (
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
+);
+
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
+);
+
+//React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:
+
+// Note: this structure is simplified
+const element = {
+  type: 'h1',
+  props: {
+    className: 'greeting',
+    children: 'Hello, world'
+  }
+};
+
+
+// Important: React must be in scope :)
+// User-defined components must be capitalized
+// Booleans, null, and undefined are ignored

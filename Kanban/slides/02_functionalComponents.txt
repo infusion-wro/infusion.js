@@ -1,0 +1,10 @@
+o Component - heart of React philosophy
+o Components let you split the UI into independent, reusable pieces, and think about each piece in isolation
+
+o Functional component:
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+// Important: Props are Read-Only!!
