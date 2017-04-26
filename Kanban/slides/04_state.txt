@@ -1,0 +1,13 @@
+o component can be stateful or stateless
+o State is similar to props, but it is private and fully controlled by the component.
+o a feature available only to classes component
+o initial state in constructor
+o read with this.state
+o update with this.setState() -> re-render component automatically
+o state updates are merged
+
+o Important: state updates may be asynchronous
+  - when the new state relies from the last state, should we use setState that accepts a function rather than an object:
+  this.setState((prevState, props) => ({
+    counter: prevState.counter + props.increment
+  }));
