@@ -1,0 +1,63 @@
+
+Each component has several "lifecycle methods" that you can override to run code at particular times in the process. Methods prefixed with 'WILL' are called right before something happens, and methods prefixed with 'DID' are called right after something happens.
+
+class componentName extends Component {
+  constructor(props) {
+    super(props);
+    //is called before it is mounted
+    //the right place to initialize state and bind methods
+  }
+
+  componentWillMount() {
+    // is invoked immediately before mounting occurs
+    // Avoid introducing any side-effects or subscriptions in this method.
+  }
+
+  componentDidMount() {
+    //is invoked immediately after a component is mounted
+    //this is a good place to instantiate the network request
+  }
+
+  componentWillReceiveProps(nextProps) {
+    //is invoked before a mounted component receives new props (even if the props values have not changed)
+    //this is a good place to update the state in response to prop changes
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    //  is invoked before rendering when new props or state are being received
+    // enables to define if a re-rendering is needed or can be skipped (defaults to true)
+
+    // returns false, then componentWillUpdate(), render(), and componentDidUpdate() will not be invoked
+    // returning false does not prevent child components from re-rendering when their state changes.
+
+    // this is a good place to increase performance
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    // is invoked immediately before rendering when new props or state are being received. 
+    // Use this as an opportunity to perform preparation before an update occurs.
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // is invoked immediately after updating occurs
+    // This is also a good place to do network requests
+  }
+
+  componentWillUnmount() {
+    // is invoked immediately before a component is unmounted and destroyed 
+    // Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any DOM elements that were created in componentDidMount
+  }
+
+  render() {
+    // The render() function should be pure, meaning that it does not modify component state, it returns the same result each time it's invoked, and it does not directly interact with the browser. 
+    // If you need to interact with the browser, perform your work in the other lifecycle methods instead
+
+    return (
+      <div>
+
+      </div>
+    )
+  }
+}
+
+//TODO: fun with lifecycle methods

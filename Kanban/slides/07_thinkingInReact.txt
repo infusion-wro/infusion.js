@@ -1,0 +1,8 @@
+0. mock/get data
+1. break the ui into a component hierarchy
+2. make static version
+3. identify state model
+4. specify stateful and stateless components
+5. add inverse data flow  
+
+//TODO: create ContactApp

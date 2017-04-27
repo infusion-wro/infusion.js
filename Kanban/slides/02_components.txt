@@ -1,0 +1,21 @@
+o Component - heart of React philosophy
+o Components let you split the UI into independent, reusable pieces, and think about each piece in isolation
+
+o Functional component:
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+// Hint: don't use this.props in functional component
+
+// Important: Props are Read-Only!!
+
+o Class component
+  - extends React.Component
+  - has state (private and fully controlled by the component)
+  - lifecycle methods
+
+o Both has props, and both can validate props
+
+//TODO: create functional component in Kanban
