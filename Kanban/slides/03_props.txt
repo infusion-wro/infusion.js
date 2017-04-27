@@ -83,3 +83,5 @@ MyComponent.propTypes = {
 MyComponent.defaultProps = {
   name: 'Stranger'
 };
+
+//TODO: add custom validator to Kanban

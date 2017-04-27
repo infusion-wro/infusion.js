@@ -11,3 +11,8 @@ o Important: state updates may be asynchronous
   this.setState((prevState, props) => ({
     counter: prevState.counter + props.increment
   }));
+
+o data flows down
+  Any state is always owned by some specific component, and any data or UI derived from that state can only affect components "below" them in the tree.
+
+//TODO: update state with function

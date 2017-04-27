@@ -17,3 +17,5 @@ o Class component
   - lifecycle methods
 
 o Both has props, and both can validate props
+
+//TODO: create functional component in Kanban
