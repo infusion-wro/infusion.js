@@ -4,7 +4,7 @@ import CheckList from './CheckList'
 
 function Title (props) {
   return (
-    <div className={props.showDetails ? 'card__title card__title--is-open' : 'card__title'} onClick={props.onClick} >
+    <div className={props.isOpen ? 'card__title card__title--is-open' : 'card__title'} onClick={props.onClick} >
       {props.title}
     </div>
   )
@@ -12,7 +12,7 @@ function Title (props) {
 
 Title.propTypes = {
   title: PropTypes.string,
-  showDetails: PropTypes.bool,
+  isOpen: PropTypes.bool,
   onClick: PropTypes.func
 }
 
@@ -53,7 +53,7 @@ class Card extends Component {
     return (
       <div className='card'>
         <div style={sideColor} />
-        <Title title={this.props.title} showDetails={this.state.showDetails} onClick={this.toggleDetails} />
+        <Title title={this.props.title} isOpen={this.state.showDetails} onClick={this.toggleDetails} />
         {cardDetails}
       </div>
     )
