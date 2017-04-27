@@ -1,0 +1,40 @@
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
+
+class ContactsApp extends Component {
+  render() {
+    return (
+      <div>
+        <SearchBar/>
+        <ContactList contacts={this.props.contacts}/>
+      </div>
+    )
+  }
+}
+
+ContactsApp.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object)
+}
+
+class SearchBar extends Component {
+  render() {
+    return <input type="search" placeholder="search"/>
+  }
+}
+
+class ContactList extends Component {
+  render() {
+    return (
+      <ul>
+        {this.props.contacts.map(contact => <Contact key={contact.name} contact={contact}/>)}
+      </ul>
+    )
+  }
+}
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object)
+}
+
+const Contact = (props) => <h4>{props.contact.name}</h4>
+
+export default ContactsApp

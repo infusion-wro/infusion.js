@@ -6,6 +6,3 @@
 5. add inverse data flow  
 
 //TODO: create ContactApp
-
-//digression: Composition vs Inheritance
-//Lifting State Up
