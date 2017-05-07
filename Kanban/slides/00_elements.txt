@@ -1,5 +1,5 @@
 o React -> view
-o UI builded from elements
+o UI is builded with elements
 o Elements are the smallest building blocks of React apps
 o React elements are plain objects, and are cheap to create
 o React elements are immutable

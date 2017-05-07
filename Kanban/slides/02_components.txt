@@ -18,4 +18,6 @@ o Class component
 
 o Both has props, and both can validate props
 
+o Composition vs Inheritance
+
 //TODO: create functional component in Kanban

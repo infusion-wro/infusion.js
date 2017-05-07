@@ -1,0 +1,6 @@
+o We use JSX to create element
+o JSX is 'html on steroids'
+o Translated to JavaScript
+o We can embed any JavaScript expression by wrapping it in curly braces
+o btw. JSX prevents injection attacks
+
