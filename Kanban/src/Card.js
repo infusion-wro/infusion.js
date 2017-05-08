@@ -35,7 +35,7 @@ class Card extends Component {
       cardDetails = (
         <div className='card__details'>
           {this.props.description}
-          <CheckList cardId={this.props.id} tasks={this.props.tasks} />
+          <CheckList cardId={this.props.id} tasks={this.props.tasks} taskCallbacks={this.props.taskCallbacks} />
         </div>
       )
     }
@@ -74,7 +74,8 @@ Card.propTypes = {
   tasks: PropTypes.array,
   title: titlePropTypes,
   description: PropTypes.string.isRequired,
-  color: PropTypes.string
+  color: PropTypes.string,
+  taskCallbacks: PropTypes.object
 }
 
 Card.defaultProps = {

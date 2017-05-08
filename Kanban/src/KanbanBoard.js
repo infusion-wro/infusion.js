@@ -12,20 +12,24 @@ class KanbanBoard extends Component {
       <div className='app'>
         <List key='todo'
           title='To Do'
-          cards={todoCards} />
+          cards={todoCards}
+          taskCallbacks={this.props.taskCallbacks} />
         <List key='in-progress'
           title='In Progress'
-          cards={inProgressCards} />
+          cards={inProgressCards}
+          taskCallbacks={this.props.taskCallbacks} />
         <List key='done'
           title='Done'
-          cards={doneCards} />
+          cards={doneCards}
+          taskCallbacks={this.props.taskCallbacks} />
       </div>
     )
   }
 };
 
 KanbanBoard.propTypes = {
-  cards: PropTypes.array
+  cards: PropTypes.array,
+  taskCallbacks: PropTypes.object
 }
 
 export default KanbanBoard

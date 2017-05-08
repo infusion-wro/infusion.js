@@ -9,8 +9,11 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
+    "babel-polyfill": "~6.7.*",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-addons-update": "^15.5.4",
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
