@@ -35,7 +35,7 @@ class Card extends Component {
       cardDetails = (
         <div className='card__details'>
           {this.props.description}
-          <CheckList cardId={this.props.id} tasks={this.props.tasks} />
+          <CheckList cardId={this.props.id} tasks={this.props.tasks} taskCallbacks={this.props.taskCallbacks} />
         </div>
       )
     }
@@ -70,11 +70,12 @@ const titlePropTypes = (props, propName, componentName) => {
 }
 
 Card.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   tasks: PropTypes.array,
   title: titlePropTypes,
   description: PropTypes.string.isRequired,
-  color: PropTypes.string
+  color: PropTypes.string,
+  taskCallbacks: PropTypes.object.isRequired
 }
 
 Card.defaultProps = {
