@@ -1,40 +1,13 @@
 import React from 'react'
 import {render} from 'react-dom'
-import KanbanBoard from './KanbanBoard'
+import {Provider} from 'react-redux'
+import KanbanBoardContainer from './KanbanBoardContainer'
+import configureStore from './store/configureStore'
 
-let cardsList = [
-  {
-    id: 1,
-    title: 'Read the Book',
-    color: 'brown',
-    description: 'I should read the whole book',
-    status: 'in-progress',
-    tasks: []
-  },
-  {
-    id: 2,
-    title: 'Write some code',
-    color: 'green',
-    description: 'Code along with the samples in the book',
-    status: 'todo',
-    tasks: [
-      {
-        id: 1,
-        name: 'ContactList Example',
-        done: true
-      },
-      {
-        id: 2,
-        name: 'Kanban Example',
-        done: false
-      },
-      {
-        id: 3,
-        name: 'My own experiments',
-        done: false
-      }
-    ]
-  }
-]
+let store = configureStore()
 
-render(<KanbanBoard cards={cardsList} />, document.getElementById('root'))
+render(
+  <Provider store={store}>
+    <KanbanBoardContainer />
+  </Provider>
+  , document.getElementById('root'))
